@@ -11,6 +11,11 @@ readable layout and keymap definitions for use with my [keymap-editor] tool.
 > demonstration purposes I've never actually tested it on a corne keyboard.
 > You're just better off using the one that is provided in the ZMK repo.
 
+> **Warning**
+> In fact, this demo includes rotary encoders which don't exist for the corne
+> keyboard, so while the produced keymap is syntactically valid it can't be
+> used as-is to build ZMK firmware for an actual corne.
+
 ![Screenshot](screenshot.png)
 
 ## What's included
