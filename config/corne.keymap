@@ -125,23 +125,23 @@
 
       hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
     };
-    volknob: volume_encoder {
-      compatible = "zmk,behavior-sensor-rotate";
-      #binding-cells = <0>;
-      label = "ENCODER_VOLUME_KNOB";
-      bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-    };
-    rgbknob: rgb_encoder {
-      compatible = "zmk,behavior-sensor-rotate-var";
-      #binding-cells = <0>;
-      label = "ENCODER_RGB";
-      bindings = <&rgb_ug>, <&rgb_ug>;
-    };
     capdance: capdance {
       compatible = "zmk,behavior-tap-dance";
       label = "CAPDANCE";
       #binding-cells = <0>;
       bindings = <&caps_word>, <&kp CAPS>;
+    };
+    volknob: volume_encoder {
+      compatible = "zmk,behavior-sensor-rotate";
+      label = "ENCODER_VOLUME_KNOB";
+      #sensor-binding-cells = <0>;
+      bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+    };
+    rgbknob: rgb_encoder {
+      compatible = "zmk,behavior-sensor-rotate-var";
+      label = "ENCODER_RGB";
+      #sensor-binding-cells = <2>;
+      bindings = <&rgb_ug>, <&rgb_ug>;
     };
   };
 
