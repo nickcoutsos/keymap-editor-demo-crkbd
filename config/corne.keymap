@@ -61,11 +61,11 @@
     rgblayer: rgb_layer {
       compatible = "zmk,behavior-macro-two-param";
       #binding-cells = <2>;
-      label = "MOMENTARY_LAYER_WITH_RGB_SELECTION";
+      label = "MOMENTARY_LAYER_WITH_RGB_COLOR";
       bindings
-        = <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB &macro_param_1to1>
+        = <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>
         , <&macro_press>
-        , <&mo 0>
+        , <&mo MACRO_PLACEHOLDER>
         , <&macro_pause_for_release>
         , <&macro_release>
         , <&macro_param_1to1 &mo 0>
